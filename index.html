@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17231f">
+  <meta name="description" content="A quest journal and progress tracker for your Minecraft Bedrock Survival world.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>The Forever World — Adventurer's Journal</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="The Forever World home">
+      <span class="brand-mark">✦</span>
+      <span><strong>THE FOREVER WORLD</strong><small>ADVENTURER'S JOURNAL</small></span>
+    </a>
+    <button id="install-hint" class="quiet-button" type="button" hidden>Install app</button>
+  </header>
+  <main class="shell">
+    <section class="welcome">
+      <p class="eyebrow">YOUR WORLD. YOUR STORY.</p>
+      <h1>The adventure<br><em>never ends.</em></h1>
+      <p class="intro">A living quest log for your Minecraft Survival world. Build, explore, automate, conquer — and keep finding the next thing to do.</p>
+    </section>
+    <section class="summary-grid" aria-label="World progress">
+      <article class="stat-card"><span class="stat-label">QUESTS COMPLETE</span><strong id="completed-count">0 / 0</strong><span class="stat-note">Your journey so far</span></article>
+      <article class="stat-card"><span class="stat-label">ADVENTURE POINTS</span><strong id="points-count">0</strong><span class="stat-note">Earned through play</span></article>
+      <article class="stat-card"><span class="stat-label">CURRENT RANK</span><strong id="rank-name">Settler</strong><span class="stat-note" id="next-rank">Your story starts here</span></article>
+    </section>
+    <nav class="tabs" aria-label="Journal sections">
+      <button class="tab active" data-view="campaign">Campaign</button>
+      <button class="tab" data-view="milestones">Milestones</button>
+      <button class="tab" data-view="about">Journal info</button>
+    </nav>
+    <section id="campaign-view" class="view">
+      <div class="section-heading"><div><p class="eyebrow">THE MAIN QUEST</p><h2>Your campaign</h2></div><span id="chapter-progress" class="pill">Chapter 1 of 8</span></div>
+      <div id="chapters" class="chapter-list"></div>
+    </section>
+    <section id="milestones-view" class="view" hidden>
+      <p class="eyebrow">MARK THE MOMENTS</p><h2>World milestones</h2>
+      <div id="milestones" class="milestone-list"></div>
+    </section>
+    <section id="about-view" class="view" hidden>
+      <p class="eyebrow">A NOTE FROM YOUR JOURNAL</p><h2>Made for the long haul.</h2>
+      <p>This is your personal Minecraft Bedrock Survival companion. Your progress is saved in this browser on this device. Use the export button regularly to keep a backup.</p>
+      <div class="data-actions"><button id="export-button" class="action-button">Export progress</button><label class="action-button secondary" for="import-file">Import backup</label><input id="import-file" type="file" accept="application/json" hidden><button id="reset-button" class="text-button">Reset progress</button></div>
+      <p class="fine-print">This first version stores progress locally. Clearing browser data may erase it, so keep an exported backup somewhere safe. No account or cloud sync is enabled.</p>
+      <p class="fine-print">Designed for Minecraft Bedrock Edition. Check that any farm or redstone design you use is Bedrock-compatible.</p>
+    </section>
+    <footer><span>THE FOREVER WORLD</span><span>Keep crafting your story.</span></footer>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>
