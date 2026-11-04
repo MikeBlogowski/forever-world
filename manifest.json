@@ -1,0 +1,13 @@
+{
+  "name": "The Forever World — Adventurer's Journal",
+  "short_name": "Forever World",
+  "description": "A quest journal for your Minecraft Bedrock Survival world.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#111916",
+  "theme_color": "#17231f",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
